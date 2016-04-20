@@ -14,6 +14,7 @@ namespace Charter.Tests
     using System.Threading.Tasks;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using TestStack.BDDfy;
+    using Web.Models;
 
     [TestClass]
     [Story(
@@ -22,5 +23,22 @@ namespace Charter.Tests
         SoThat = "So that they can be used as arrivals or departures")]
     internal class LocationsCanBeAdded
     {
+        private User user;
+
+        public void GivenThatWeAreAUserNamedTestUser()
+        {
+            this.user = new User("Test User");
+        }
+
+        public void AndGivenThatWeAreAnAdministrator()
+        {
+            this.user.ChangeRole(UserRoles.Administrator);
+
+            Assert.AreEqual(UserRoles.Administrator, this.user.Role);
+        }
+
+        public void ThenWeShouldBeAbleToAddALocation()
+        {
+        }
     }
 }
