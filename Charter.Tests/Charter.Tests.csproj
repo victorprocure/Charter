@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="ArrivalLocationCanBeSelected.cs" />
     <Compile Include="DepartureLocationCanBeSelected.cs" />
+    <Compile Include="LocationsCanBeAdded.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
